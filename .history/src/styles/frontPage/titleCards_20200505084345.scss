@@ -1,0 +1,11 @@
+@import "../_variables.scss";
+
+.title-card {
+  &-title {
+    z-index: 1;
+    bottom: 0;
+  }
+
+  &-image {
+  }
+}

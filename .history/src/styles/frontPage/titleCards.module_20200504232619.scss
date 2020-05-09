@@ -1,0 +1,15 @@
+@import "../_variables.scss";
+
+.card {
+  width: 100%;
+
+  &Title {
+  }
+
+  &Image {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

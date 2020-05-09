@@ -1,0 +1,12 @@
+@import "../../styles/_variables.scss";
+
+nav a {
+  color: $gray-700;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: $gray-900;
+    text-decoration: none;
+    background-color: red;
+  }
+}

@@ -1,0 +1,11 @@
+.page-divider {
+  text-align: center;
+  display: flex;
+
+  &::before,
+  &::after {
+    content: "";
+    height: 1px;
+    background-color: black;
+  }
+}

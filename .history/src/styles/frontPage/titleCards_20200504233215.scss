@@ -1,0 +1,16 @@
+@import "../_variables.scss";
+
+.title-card {
+  width: 100%;
+  padding-top: 56.25%;
+
+  &-title {
+  }
+
+  &-image {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

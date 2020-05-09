@@ -1,0 +1,11 @@
+// Grid
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 16px;
+}
+
+// Shadow
+.card-shadow {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}

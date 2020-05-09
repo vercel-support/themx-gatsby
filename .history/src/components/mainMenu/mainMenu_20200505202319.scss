@@ -1,0 +1,9 @@
+@import "../../styles/_variables.scss";
+
+nav a {
+  color: $gray-900;
+
+  &:hover {
+    color: $gray-700;
+  }
+}

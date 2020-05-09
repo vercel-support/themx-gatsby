@@ -1,0 +1,23 @@
+@import "../../styles/_variables.scss";
+
+nav a {
+  color: $gray-700;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 2px solid $white;
+  padding: 4px 16px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: $gray-900;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &:hover {
+      right: 0;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "../../styles/_variables.scss";
+
+nav a {
+  color: $gray-700;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid $white;
+  padding: 4px 16px;
+
+  &:hover {
+    color: $gray-900;
+    text-decoration: none;
+    border: 2px solid $gray-900;
+  }
+}

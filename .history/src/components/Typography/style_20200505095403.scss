@@ -1,0 +1,139 @@
+@import "scss/_variables.scss";
+
+/* stylelint-disable selector-no-qualifying-type */
+h1.typography,
+.h1.typography {
+  line-height: $h1-line-height;
+
+  @media (min-width: map-get($grid-breakpoints, "md")) {
+    font-size: $h1-font-size-lg;
+    line-height: $h1-line-height-lg;
+  }
+}
+h2.typography,
+.h2.typography {
+  line-height: $h2-line-height;
+
+  @media (min-width: map-get($grid-breakpoints, "md")) {
+    font-size: $h2-font-size-lg;
+    line-height: $h2-line-height-lg;
+  }
+}
+h3.typography,
+.h3.typography {
+  line-height: $h3-line-height;
+
+  @media (min-width: map-get($grid-breakpoints, "md")) {
+    font-size: $h3-font-size-lg;
+    line-height: $h3-line-height-lg;
+  }
+}
+h4.typography,
+.h4.typography {
+  line-height: $h4-line-height;
+
+  @media (min-width: map-get($grid-breakpoints, "md")) {
+    font-size: $h4-font-size-lg;
+    line-height: $h4-line-height-lg;
+  }
+}
+h5.typography,
+.h5.typography {
+  line-height: $h5-line-height;
+
+  @media (min-width: map-get($grid-breakpoints, "md")) {
+    font-size: $h5-font-size-lg;
+    line-height: $h5-line-height-lg;
+  }
+}
+h6.typography,
+.h6.typography {
+  line-height: $h6-line-height;
+
+  @media (min-width: map-get($grid-breakpoints, "md")) {
+    font-size: $h6-font-size-lg;
+    line-height: $h6-line-height-lg;
+  }
+}
+/* stylelint-enable selector-no-qualifying-type */
+
+.typography {
+  &.body-s {
+    font-size: $font-size-sm;
+    line-height: 1.375;
+  }
+
+  &.body-m {
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+  }
+
+  &.body-l {
+    font-size: $font-size-lg;
+    line-height: 28px;
+  }
+
+  &.button {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+  }
+
+  &.subtitle-1 {
+    font-size: $subtitle-1-font-size;
+    line-height: $subtitle-1-line-height;
+
+    @media (min-width: map-get($grid-breakpoints, "md")) {
+      font-size: $subtitle-1-font-size-lg;
+      line-height: $subtitle-1-line-height-lg;
+    }
+  }
+
+  &.subtitle-2 {
+    font-size: $subtitle-2-font-size;
+    line-height: $subtitle-2-line-height;
+
+    @media (min-width: map-get($grid-breakpoints, "md")) {
+      font-size: $subtitle-2-font-size-lg;
+      line-height: $subtitle-2-line-height-lg;
+    }
+  }
+
+  &.weight {
+    &-extra-light {
+      font-weight: 100;
+    }
+
+    &-light {
+      font-weight: 200;
+    }
+
+    &-thin {
+      font-weight: 300;
+    }
+
+    &-normal {
+      font-weight: 400;
+    }
+
+    &-medium {
+      font-weight: 500;
+    }
+
+    &-semi-bold {
+      font-weight: 600;
+    }
+
+    &-bold {
+      font-weight: 700;
+    }
+
+    &-extra-bold {
+      font-weight: 800;
+    }
+
+    &-black {
+      font-weight: 900;
+    }
+  }
+}

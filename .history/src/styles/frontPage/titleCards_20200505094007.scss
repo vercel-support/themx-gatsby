@@ -1,0 +1,17 @@
+@import "../_variables.scss";
+
+.title-card {
+  color: $gray-900;
+
+  &-category {
+    top: 0;
+  }
+
+  &-title {
+    bottom: 0;
+  }
+
+  &-image {
+    z-index: -1;
+  }
+}

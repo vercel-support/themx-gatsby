@@ -1,0 +1,23 @@
+.page-divider {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+
+  &::before,
+  &::after {
+    content: "";
+    height: 1px;
+    background-color: $gray-900;
+    width: 100%;
+  }
+
+  &::before {
+    margin-right: 16px;
+  }
+
+  &::after {
+    margin-left: 16px;
+  }
+}

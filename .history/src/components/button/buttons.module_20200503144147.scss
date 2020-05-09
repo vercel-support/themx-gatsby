@@ -1,0 +1,78 @@
+@import "styles/variables";
+
+button,
+.button {
+  border: none;
+  font-size: 1rem;
+  line-height: 1rem;
+  background-color: $color-primary;
+  padding: 1rem 5rem 1rem 2rem;
+  margin: 32px auto;
+  font-family: $font-body;
+  border-radius: 4px;
+  transition: all 0.8s ease-in-out, box-shadow 0.1s ease-in-out,
+    transform 0.1s ease-in-out;
+  cursor: pointer;
+  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+  color: $light-text;
+  transform: translateX(0);
+  overflow: hidden;
+  white-space: nowrap;
+
+  &::before {
+    content: "";
+    height: 100%;
+    width: 3rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0 4px 4px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 0.8s ease-in-out;
+  }
+
+  &::after {
+    content: "";
+    height: 0.5em;
+    width: 0.5em;
+    border-top: 2px solid $light-text;
+    border-right: 2px solid $light-text;
+    border-radius: 0 4px 0 0;
+    transform: rotate(45deg);
+    right: 1.5em;
+    top: 1.25em;
+    position: absolute;
+    transition: all 0.8s ease-in-out;
+    opacity: 1;
+  }
+
+  &:focus,
+  &:active {
+    background-color: purple;
+  }
+
+  &:hover {
+    background-color: $color-secondary;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+    padding: 1rem 3.5rem 1rem 3.5rem;
+
+    &::before {
+      width: 0;
+    }
+
+    &::after {
+      right: -20px;
+    }
+  }
+}
+
+.card-button {
+  background-color: $color-primary;
+  border-radius: 4px;
+  padding: 0.5em;
+  margin: 16px;
+  color: $light-text;
+  text-align: center;
+}
