@@ -19,10 +19,8 @@ module.exports = {
       options: {
         typeName: `WPGraphql`,
         fieldName: `wpgraphql`,
-        // url: `http://localhost/travelaar.dev/graphql`,
+        url: `http://localhost/travelaar.dev/graphql`,
         // url: `https://travelaar.zandbox.xyz/graphql`,
-        // url: `https://travelaar.com/graphql`,
-        url: `https://travelaar.nl/graphql`,
       },
     },
     {

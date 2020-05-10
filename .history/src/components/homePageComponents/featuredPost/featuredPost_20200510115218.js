@@ -8,7 +8,7 @@ export default function FeaturedPost() {
   const data = useStaticQuery(graphql`
     query FeaturedPostQuery {
       wpgraphql {
-        post(id: "cG9zdDoxMDY0Mw==") {
+        post(id: "cG9zdDoyMTYx") {
           uri
           title
           featuredImage {

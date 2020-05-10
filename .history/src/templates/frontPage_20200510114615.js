@@ -61,7 +61,7 @@ export default FrontPage
 export const frontPageQuery = graphql`
   query GET_FRONTPAGE($id: ID!) {
     wpgraphql {
-      mediaItemBy(mediaItemId: 37185) {
+      mediaItemBy(mediaItemId: 2186) {
         altText
         sourceUrl
         imageFile {
