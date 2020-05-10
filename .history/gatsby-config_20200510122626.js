@@ -3,7 +3,7 @@ module.exports = {
     title: `Travelaar`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
-    siteUrl: "travelaar-gatsby.zandbox.xyz",
+    siteUrl: "themx-gatsby.zandbox.xyz",
   },
   plugins: [
     `gatsby-plugin-sass`,
