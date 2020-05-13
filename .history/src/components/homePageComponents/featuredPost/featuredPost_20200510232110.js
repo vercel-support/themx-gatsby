@@ -8,7 +8,7 @@ export default function FeaturedPost() {
   const data = useStaticQuery(graphql`
     query FeaturedPostQuery {
       wpgraphql {
-        post(id: "cG9zdDoxMDY0Mw==") {
+        post(id: "cG9zdDoxNTE3OA==") {
           uri
           title
           featuredImage {
@@ -26,7 +26,6 @@ export default function FeaturedPost() {
       }
     }
   `)
-  // livegang
 
   const { uri, title, featuredImage } = data.wpgraphql.post
   return (

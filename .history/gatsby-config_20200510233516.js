@@ -3,9 +3,8 @@ module.exports = {
     title: `Travelaar`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
-    // siteUrl: "http://localhost:8000",
-    siteUrl: "https://travelaar-gatsby.zandbox.xyz",
-    // livegang
+    siteUrl: "http://localhost:8000",
+    // siteUrl: "https://travelaar-gatsby.zandbox.xyz",
   },
   plugins: [
     {
@@ -25,11 +24,10 @@ module.exports = {
       options: {
         typeName: `WPGraphql`,
         fieldName: `wpgraphql`,
-        // url: `http://localhost/travelaar.dev/graphql`,
+        url: `http://localhost/travelaar.dev/graphql`,
         // url: `https://travelaar.zandbox.xyz/graphql`,
         // url: `https://travelaar.com/graphql`,
-        url: `https://travelaar.nl/graphql`,
-        // livegang
+        // url: `https://travelaar.nl/graphql`,
       },
     },
     {

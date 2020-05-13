@@ -14,7 +14,7 @@ const MAIN_MENU_QUERY = graphql`
       allSettings {
         generalSettingsTitle
       }
-      menuItems(where: { location: HEADER_MENU }) {
+      menuItems(where: { location: MENU_1 }) {
         nodes {
           ...MenuFields
         }

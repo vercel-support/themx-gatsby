@@ -12,37 +12,37 @@ import FeaturedPost from "../components/homePageComponents/featuredPost/featured
 const FrontPage = props => {
   const {
     data: {
-      wpgraphql: { page, posts },
+      wpgraphql: { page, pageBy, posts },
     },
   } = props
   const { title } = page
   const { edges } = posts
   const imageSources = [
-    page.featuredImage.portrait.childImageSharp.fluid,
+    pageBy.imageFile.childImageSharp.fluid,
     {
-      ...page.featuredImage.portrait.childImageSharp.fluid,
+      ...pageBy.imageFile.childImageSharp.fluid,
       media: `(max-width: 640px)`,
     },
-    page.featuredImage.landscape.childImageSharp.fluid,
+    page.imageFile.childImageSharp.fixed,
     {
-      ...page.featuredImage.landscape.childImageSharp.fluid,
+      ...page.imageFile.childImageSharp.fixed,
       media: `(min-width: 640px)`,
     },
   ]
   return (
     <Layout>
       <SEO title={title} />
-      <Img fluid={imageSources} alt={title} />
+      <div>
+        <Img fluid={imageSources} alt={title} />
+        {console.log(imageSources)}
+      </div>
       <PageDivider component="h2">Onze laatste artikelen</PageDivider>
       <div className="container grid">
         {edges.map(edge => {
-          const { title, uri, featuredImage, categories, id } = edge.node
+          const { title, uri, featuredImage, categories } = edge.node
           return (
             <Link to={uri} className="title-card position-relative rounded">
-              <Typography
-                key={id}
-                className="title-card-category position-absolute rounded bg-primary"
-              >
+              <Typography className="title-card-category position-absolute rounded bg-primary">
                 {categories.nodes[0].name}
               </Typography>
               <h2
@@ -80,26 +80,26 @@ export const frontPageQuery = graphql`
         title
         content
         uri
-        id
         featuredImage {
           sourceUrl
-          portrait: imageFile {
+          imageFile {
+            childImageSharp {
+              fixed(width: 2560, height: 512) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+        }
+      }
+      pageBy(id: $id) {
+        featuredImage {
+          sourceUrl
+          imageFile {
             childImageSharp {
               fluid(
                 maxWidth: 640
                 maxHeight: 640
                 sizes: "(max-width: 640px) 100vw, 100vw"
-              ) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-          landscape: imageFile {
-            childImageSharp {
-              fluid(
-                maxWidth: 2560
-                maxHeight: 512
-                sizes: "(max-width: 1280px) 100vw, (max-width: 2560px) 100vw, 100vw"
               ) {
                 ...GatsbyImageSharpFluid_withWebp
               }

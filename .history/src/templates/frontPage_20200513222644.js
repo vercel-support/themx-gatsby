@@ -12,20 +12,20 @@ import FeaturedPost from "../components/homePageComponents/featuredPost/featured
 const FrontPage = props => {
   const {
     data: {
-      wpgraphql: { page, posts },
+      wpgraphql: { page, pageBy, posts },
     },
   } = props
   const { title } = page
   const { edges } = posts
   const imageSources = [
-    page.featuredImage.portrait.childImageSharp.fluid,
+    pageBy.featuredImage.imageFile.childImageSharp.fluid,
     {
-      ...page.featuredImage.portrait.childImageSharp.fluid,
+      ...pageBy.featuredImage.imageFile.childImageSharp.fluid,
       media: `(max-width: 640px)`,
     },
-    page.featuredImage.landscape.childImageSharp.fluid,
+    page.featuredImage.imageFile.childImageSharp.fluid,
     {
-      ...page.featuredImage.landscape.childImageSharp.fluid,
+      ...page.featuredImage.imageFile.childImageSharp.fluid,
       media: `(min-width: 640px)`,
     },
   ]
@@ -83,23 +83,28 @@ export const frontPageQuery = graphql`
         id
         featuredImage {
           sourceUrl
-          portrait: imageFile {
-            childImageSharp {
-              fluid(
-                maxWidth: 640
-                maxHeight: 640
-                sizes: "(max-width: 640px) 100vw, 100vw"
-              ) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-          landscape: imageFile {
+          imageFile {
             childImageSharp {
               fluid(
                 maxWidth: 2560
                 maxHeight: 512
                 sizes: "(max-width: 1280px) 100vw, (max-width: 2560px) 100vw, 100vw"
+              ) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+        }
+      }
+      pageBy(id: $id) {
+        featuredImage {
+          sourceUrl
+          imageFile {
+            childImageSharp {
+              fluid(
+                maxWidth: 640
+                maxHeight: 640
+                sizes: "(max-width: 640px) 100vw, 100vw"
               ) {
                 ...GatsbyImageSharpFluid_withWebp
               }

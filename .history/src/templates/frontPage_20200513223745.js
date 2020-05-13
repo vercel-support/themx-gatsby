@@ -18,14 +18,14 @@ const FrontPage = props => {
   const { title } = page
   const { edges } = posts
   const imageSources = [
-    page.featuredImage.portrait.childImageSharp.fluid,
+    page.featuredImage.portrait.imageFile.childImageSharp.fluid,
     {
-      ...page.featuredImage.portrait.childImageSharp.fluid,
+      ...page.featuredImage.portrait.imageFile.childImageSharp.fluid,
       media: `(max-width: 640px)`,
     },
-    page.featuredImage.landscape.childImageSharp.fluid,
+    page.featuredImage.landscape.imageFile.childImageSharp.fluid,
     {
-      ...page.featuredImage.landscape.childImageSharp.fluid,
+      ...page.featuredImage.landscape.imageFile.childImageSharp.fluid,
       media: `(min-width: 640px)`,
     },
   ]
