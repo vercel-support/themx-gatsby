@@ -1,0 +1,6 @@
+@import "./variables";
+
+.container {
+  @media (min-width: map-get($grid-breakpoints, "sm"));
+  padding: 0;
+}

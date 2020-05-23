@@ -1,0 +1,15 @@
+// Grid
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 16px;
+}
+
+.grid-height-300 {
+  grid-template-rows: repeat(6, minmax(300px, fit-content));
+}
+
+// Shadow
+.card-shadow {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.05);
+}

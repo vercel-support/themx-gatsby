@@ -1,0 +1,30 @@
+@import "variables";
+
+.content-layout {
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    border-bottom: 1px solid $gray-900;
+    padding-bottom: 4px;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    color: $primary;
+  }
+
+  p,
+  ul,
+  ol {
+    margin-bottom: 3rem;
+  }
+}
