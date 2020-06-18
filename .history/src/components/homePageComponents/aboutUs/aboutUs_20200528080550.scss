@@ -1,0 +1,7 @@
+.grid-about {
+  grid-template-columns: 40% 60%;
+
+  &-image {
+    clip-path: ellipse(100% 300% at 100% 50%);
+  }
+}

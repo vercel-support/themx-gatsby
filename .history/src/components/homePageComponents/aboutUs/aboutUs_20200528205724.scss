@@ -1,0 +1,16 @@
+.about-us {
+  grid-template-columns: 40% 60%;
+
+  &-text p {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  &-image {
+    clip-path: ellipse(100% 300% at 100% 50%);
+  }
+}
+
+.clip-svg {
+  clip-path: url(#myClip);
+}

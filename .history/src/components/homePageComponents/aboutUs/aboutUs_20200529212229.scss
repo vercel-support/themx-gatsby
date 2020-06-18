@@ -1,0 +1,21 @@
+.about-us {
+  grid-template-columns: 40% 60%;
+
+  &-text {
+    p {
+      display: flex;
+      margin-top: auto;
+      margin-bottom: auto;
+      flex-grow: 2;
+    }
+
+    .about-us-mask {
+      shape-outside: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+      flex-grow: 1;
+    }
+  }
+
+  &-image {
+    clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+  }
+}

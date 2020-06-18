@@ -1,0 +1,13 @@
+.grid-about-us {
+  grid-template-columns: 40% 60%;
+
+  .about-us-clip-path {
+    clip-path: ellipse(150% 150% at 50% 50%);
+  }
+
+  .henk {
+    shape-outside: polygon(0 0, 0 200px, 200px 300px);
+    width: 300px;
+    height: 200px;
+  }
+}

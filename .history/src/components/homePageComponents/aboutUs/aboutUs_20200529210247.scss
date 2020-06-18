@@ -1,0 +1,16 @@
+.about-us {
+  grid-template-columns: 40% 60%;
+
+  &-text p {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  &-mask {
+    shape-outside: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  &-image {
+    clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+  }
+}

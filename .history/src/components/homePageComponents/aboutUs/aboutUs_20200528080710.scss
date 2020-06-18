@@ -1,0 +1,11 @@
+.about-us {
+  grid-template-columns: 40% 60%;
+
+  &-text {
+    align-self: center;
+  }
+
+  &-image {
+    clip-path: ellipse(100% 300% at 100% 50%);
+  }
+}
