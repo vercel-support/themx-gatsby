@@ -29,7 +29,7 @@ const ContinentsTemplate = props => {
                   key={node.countryMeta.featuredImage.id}
                 />
               ) : (
-                <img src="https://travelaar.nl/wp-content/uploads/2020/05/Yucatán-3.jpg" />
+                <img src="https://cdn4.iconfinder.com/data/icons/maps-of-the-world/100/.svg-12-512.png" />
               )}
               <ul>
                 {node.children.nodes.map(childNode => (
