@@ -155,7 +155,7 @@ export const frontPageQuery = graphql`
           }
         }
       }
-      aboutUs: page(idType: DATABASE_ID, id: "39331") {
+      aboutUs: page(idType: DATABASE_ID, id: "25944") {
         content(format: RENDERED)
         id
         title(format: RENDERED)
@@ -207,7 +207,7 @@ export const frontPageQuery = graphql`
           }
         }
       }
-      europePng: mediaItemBy(mediaItemId: 30452) {
+      europePng: mediaItemBy(mediaItemId: 47236) {
         id
         sourceUrl
         altText
@@ -219,7 +219,7 @@ export const frontPageQuery = graphql`
           }
         }
       }
-      asiaPng: mediaItemBy(mediaItemId: 37212) {
+      asiaPng: mediaItemBy(mediaItemId: 47232) {
         id
         sourceUrl
         altText
@@ -231,7 +231,7 @@ export const frontPageQuery = graphql`
           }
         }
       }
-      oceaniaPng: mediaItemBy(mediaItemId: 30362) {
+      oceaniaPng: mediaItemBy(mediaItemId: 47240) {
         id
         sourceUrl
         altText
