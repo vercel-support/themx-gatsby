@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Typography from "../components/typography/typography"
 
-const CountriesTemplate = props => {
+const CountryTemplate = props => {
   const {
     data: {
       wpgraphql: { category },
@@ -48,10 +48,10 @@ const CountriesTemplate = props => {
   )
 }
 
-export default CountriesTemplate
+export default CountryTemplate
 
 export const pageQuery = graphql`
-  query GET_COUNTRIES($id: ID!) {
+  query GET_COUNTRY($id: ID!) {
     wpgraphql {
       category(id: $id) {
         description
