@@ -104,11 +104,11 @@ const FrontPage = props => {
             <Typography component="h3" className="text-center">
               {europeCat.name}
             </Typography>
-            {europeCat.countryMeta.featuredImageCategory.imageFile && (
+            {europeCat.countryMeta.featuredImage.imageFile && (
               <Img
                 fixed={
-                  europeCat.countryMeta.featuredImageCategory.imageFile
-                    .childImageSharp.fixed
+                  europeCat.countryMeta.featuredImage.imageFile.childImageSharp
+                    .fixed
                 }
               />
             )}
@@ -117,11 +117,11 @@ const FrontPage = props => {
             <Typography component="h3" className="text-center">
               {asiaCat.name}
             </Typography>
-            {asiaCat.countryMeta.featuredImageCategory.imageFile && (
+            {asiaCat.countryMeta.featuredImage.imageFile && (
               <Img
                 fixed={
-                  asiaCat.countryMeta.featuredImageCategory.imageFile
-                    .childImageSharp.fixed
+                  asiaCat.countryMeta.featuredImage.imageFile.childImageSharp
+                    .fixed
                 }
               />
             )}
@@ -130,11 +130,11 @@ const FrontPage = props => {
             <Typography component="h3" className="text-center">
               {oceaniaCat.name}
             </Typography>
-            {oceaniaCat.countryMeta.featuredImageCategory.imageFile && (
+            {oceaniaCat.countryMeta.featuredImage.imageFile && (
               <Img
                 fixed={
-                  oceaniaCat.countryMeta.featuredImageCategory.imageFile
-                    .childImageSharp.fixed
+                  oceaniaCat.countryMeta.featuredImage.imageFile.childImageSharp
+                    .fixed
                 }
               />
             )}
@@ -176,7 +176,7 @@ export const frontPageQuery = graphql`
           }
         }
       }
-      aboutUs: page(idType: DATABASE_ID, id: "39331") {
+      aboutUs: page(idType: DATABASE_ID, id: "25944") {
         content(format: RENDERED)
         id
         title(format: RENDERED)
@@ -232,7 +232,7 @@ export const frontPageQuery = graphql`
         uri
         name
         countryMeta {
-          featuredImageCategory {
+          featuredimage {
             sourceUrl
             imageFile {
               childImageSharp {
@@ -248,7 +248,7 @@ export const frontPageQuery = graphql`
         uri
         name
         countryMeta {
-          featuredImageCategory {
+          featuredimage {
             sourceUrl
             imageFile {
               childImageSharp {
@@ -264,7 +264,7 @@ export const frontPageQuery = graphql`
         uri
         name
         countryMeta {
-          featuredImageCategory {
+          featuredimage {
             sourceUrl
             imageFile {
               childImageSharp {

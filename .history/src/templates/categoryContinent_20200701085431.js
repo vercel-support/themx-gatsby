@@ -26,12 +26,10 @@ const ContinentTemplate = props => {
       <section className="container grid grid-3x2 pb-60">
         {children.nodes.map(node => {
           const archiveGrid = [
-            node.countryMeta.featuredImageCategory &&
-              (node.countryMeta.featuredImageCategory.xsSm.childImageSharp
-                .fixed,
+            node.countryMeta.featuredImage &&
+              (node.countryMeta.featuredImage.xsSm.childImageSharp.fixed,
               {
-                ...node.countryMeta.featuredImageCategory.mdLgXl.childImageSharp
-                  .fixed,
+                ...node.countryMeta.featuredImage.mdLgXl.childImageSharp.fixed,
                 media: `(min-width: 768px)`,
               }),
           ]
@@ -42,10 +40,10 @@ const ContinentTemplate = props => {
               className="title-card position-relative rounded"
             >
               <Link to={node.uri}>
-                {node.countryMeta.featuredImageCategory && (
+                {node.countryMeta.featuredImage && (
                   <Img
                     fixed={archiveGrid}
-                    key={node.countryMeta.featuredImageCategory.id}
+                    key={node.countryMeta.featuredImage.id}
                     className="title-card-image rounded"
                   />
                 )}

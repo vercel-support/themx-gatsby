@@ -9,10 +9,10 @@ import Breadcrumbs from "../components/Breadcrumbs"
 const Page = props => {
   const {
     data: {
-      wpgraphql: { page },
+      wpgraphql: { page, content, seo },
     },
   } = props
-  const { title, seo, content } = page
+  const { title } = page
   return (
     <Layout>
       <Breadcrumbs props={seo} />

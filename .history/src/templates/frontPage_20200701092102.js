@@ -176,7 +176,7 @@ export const frontPageQuery = graphql`
           }
         }
       }
-      aboutUs: page(idType: DATABASE_ID, id: "39331") {
+      aboutUs: page(idType: DATABASE_ID, id: "25944") {
         content(format: RENDERED)
         id
         title(format: RENDERED)
