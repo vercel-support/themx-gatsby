@@ -1,0 +1,16 @@
+.about-us {
+  grid-template-columns: repeat(auto-fill, minmax(50%, 660px));
+
+  &-text {
+    display: flex;
+    p {
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: 96px;
+    }
+  }
+
+  &-image {
+    clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+  }
+}

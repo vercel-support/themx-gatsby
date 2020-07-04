@@ -1,0 +1,25 @@
+$nav-padding: 16px;
+$nav-font-size: 16px;
+$nav-logo-height: 32px;
+$nav-header-content-height: 51px;
+$header-height: calc((#{$nav-padding} * 2) + #{$nav-header-content-height});
+
+.main-content {
+  margin-top: $header-height;
+}
+
+.site-header {
+  padding-top: $nav-padding;
+  padding-bottom: $nav-padding;
+  font-size: $nav-font-size;
+  line-height: 1;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+}
+
+.header-pushdown {
+  height: $header-height;
+}
+
+.header-logo {
+  height: $nav-logo-height;
+}

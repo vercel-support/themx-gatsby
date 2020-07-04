@@ -1,0 +1,124 @@
+@import "../../styles/_variables.scss";
+
+nav {
+  a {
+    color: $gray-700;
+    margin: 5px 0;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+
+    @media (min-width: map-get($grid-breakpoints, "md")) {
+      padding: 4px 0;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $gray-900;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      background-color: $gray-600;
+      left: 0;
+      right: 100%;
+      bottom: 0;
+      transition: all 0.4s ease-in-out;
+    }
+
+    &:hover::before {
+      right: 0;
+    }
+  }
+
+  .hamburger-button.collapsed {
+    width: 48px;
+    height: 48px;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 4px;
+      position: absolute;
+      top: 10px;
+      left: 0;
+      background-color: $gray-600;
+    }
+  }
+
+  // .hamburger-button {
+  //   height: 48px;
+  //   width: 48px;
+  //   padding: 10px 4px;
+  //   position: relative;
+
+  //   &::before,
+  //   &::after {
+  //     content: "";
+  //     height: 4px;
+  //     border-radius: 999px;
+  //     background-color: $gray-600;
+  //     transform: none;
+  //     position: absolute;
+  //     left: 8px;
+  //     right: 8px;
+  //     top: 21px;
+  //     transition: transform 0.4s ease-in-out;
+  //   }
+
+  //   &::before {
+  //     transform: rotate(45deg);
+  //   }
+
+  //   &::after {
+  //     transform: rotate(-45deg);
+  //   }
+
+  //   .hamburger {
+  //     position: relative;
+  //     height: 4px;
+  //     width: 100%;
+  //     border-radius: 999px;
+  //     background-color: $gray-600;
+  //     visibility: hidden;
+  //     transition: all 0.4s ease-in-out;
+  //   }
+  // }
+
+  // .hamburger-button.collapsed {
+  //   height: 48px;
+  //   width: 48px;
+  //   padding: 10px 4px;
+  //   position: relative;
+
+  //   &::before,
+  //   &::after {
+  //     content: "";
+  //     height: 4px;
+  //     width: 100%;
+  //     border-radius: 999px;
+  //     background-color: $gray-600;
+  //     transform: none;
+  //     position: absolute;
+  //   }
+
+  //   &::before {
+  //     top: 0;
+  //   }
+
+  //   &::after {
+  //     bottom: 0;
+  //   }
+
+  //   .hamburger {
+  //     position: relative;
+  //     height: 4px;
+  //     width: 100%;
+  //     border-radius: 999px;
+  //     background-color: $gray-600;
+  //     visibility: visible;
+  //   }
+  // }
+}

@@ -1,0 +1,23 @@
+@import "../../../styles/variables";
+
+.about-us {
+  padding: 0 calc(#{$grid-gutter-width} / 2);
+
+  &-text {
+    display: flex;
+    p {
+      @media (min-width: map-get($grid-breakpoints, "md")) {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 96px;
+      }
+    }
+  }
+
+  @media (min-width: map-get($grid-breakpoints, "md")) {
+    &-image {
+      // clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+      clip-path: url(#aboutUsShape);
+    }
+  }
+}

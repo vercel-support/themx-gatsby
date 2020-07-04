@@ -1,0 +1,115 @@
+@import "../../styles/_variables.scss";
+
+$transition-delay-hamburger: 0.2s;
+
+nav {
+  a {
+    color: $gray-700;
+    margin: 5px 0;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+
+    @media (min-width: map-get($grid-breakpoints, "md")) {
+      padding: 4px 0;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $gray-900;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      background-color: $gray-600;
+      left: 0;
+      right: 100%;
+      bottom: 0;
+      transition: all 0.4s ease-in-out;
+    }
+
+    &:hover::before {
+      right: 0;
+    }
+  }
+
+  .hamburger-button.collapsed {
+    width: 48px;
+    height: 48px;
+    position: relative;
+
+    &::before,
+    &::after,
+    .hamburger {
+      content: "";
+      height: 4px;
+      position: absolute;
+      left: 8px;
+      right: 8px;
+      background-color: $gray-600;
+      transform: none;
+      transition: all $transition-delay-hamburger ease-in-out;
+      border-radius: 999px;
+    }
+
+    &::before {
+      top: 10px;
+    }
+
+    &::after {
+      bottom: 10px;
+      top: auto;
+    }
+
+    .hamburger {
+      transform: translateY(-50%);
+      opacity: 1;
+      transition: all $transition-delay-hamburger ease-in-out;
+    }
+  }
+
+  .hamburger-button {
+    width: 48px;
+    height: 48px;
+    position: relative;
+
+    &::before,
+    &::after,
+    .hamburger {
+      content: "";
+      height: 4px;
+      position: absolute;
+      left: 8px;
+      right: 8px;
+      background-color: $gray-600;
+      transition: all $transition-delay-hamburger ease-in-out;
+      border-radius: 999px;
+    }
+
+    &::before {
+      top: 21px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      top: 21px;
+      transform: rotate(-45deg);
+    }
+
+    .hamburger {
+      transform: translateY(-50%);
+      opacity: 0;
+    }
+  }
+}
+
+.search {
+  &-field {
+    width: 0;
+  }
+
+  &-button:hover ~ &-field {
+    // width: auto;
+  }
+}

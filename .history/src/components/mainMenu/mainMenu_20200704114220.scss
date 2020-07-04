@@ -1,0 +1,57 @@
+@import "../../styles/_variables.scss";
+
+nav {
+  a {
+    color: $gray-700;
+    padding: 16px 0 !important;
+    transition: all 0.2s ease-in-out;
+    padding: 4px 0;
+    position: relative;
+
+    &:hover {
+      text-decoration: none;
+      color: $gray-900;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      background-color: $gray-600;
+      left: 0;
+      right: 100%;
+      bottom: 0;
+      transition: all 0.4s ease-in-out;
+    }
+
+    &:hover::before {
+      right: 0;
+    }
+  }
+
+  .hamburger-button {
+    height: 48px;
+    width: 48px;
+    padding: 10px 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      height: 4px;
+      width: 100%;
+      border-radius: 999px;
+      background-color: rebeccapurple;
+    }
+
+    .hamburger {
+      position: relative;
+      height: 4px;
+      width: 100%;
+      background-color: rebeccapurple;
+    }
+  }
+}
