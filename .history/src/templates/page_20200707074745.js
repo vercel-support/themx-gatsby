@@ -20,7 +20,7 @@ const Page = (props) => {
         <Typography variant='h1'>
           {title}
         </Typography>
-        {/* <div>{contentParser({ content }, { wordPressUrl, uploadsUrl })}</div> */}
+        {/* <div>{contentParser({ content }, { wordPressUrl, uploadsUrl })}</div>  */}
         <div
           dangerouslySetInnerHTML={{
             __html: content,

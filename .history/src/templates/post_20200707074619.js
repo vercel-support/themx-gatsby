@@ -26,6 +26,7 @@ const Post = (props) => {
     author,
     categories,
     tags,
+    uri,
     content,
     featuredImage,
     hotelCards,

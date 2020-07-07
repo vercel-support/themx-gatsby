@@ -10,7 +10,14 @@ const CategoryTemplate = (props) => {
       wpgraphql: { category },
     },
   } = props;
-  const { name, children, seo } = category;
+  const {
+    name,
+    description,
+    children,
+    countryMeta,
+    ancestors,
+    seo,
+  } = category;
   return (
     <Layout>
       <SEO title={`Categorie: ${name}`} />

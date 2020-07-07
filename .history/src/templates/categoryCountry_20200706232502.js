@@ -2,8 +2,15 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import Typography from '../components/typography/typography';
 import Img from 'gatsby-image';
 import '../components/homePageComponents/titleCards/titleCards.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faHome,
+  faChevronRight,
+} from '@fortawesome/free-solid-svg-icons';
+import config from '../../config.js';
 import Breadcrumbs from '../components/Breadcrumbs';
 
 const CountryTemplate = (props) => {

@@ -1,7 +1,8 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import contentParser from 'gatsby-wpgraphql-inline-images';
 import Typography from '../components/typography/typography';
 import Breadcrumbs from '../components/Breadcrumbs';
 
