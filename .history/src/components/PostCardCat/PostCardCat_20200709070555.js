@@ -14,7 +14,8 @@ const PostCardCat = ({ props }) => {
           id,
         } = node;
         const imageSourcesSixPosts = [
-          countryMeta.featuredImageCategory &&
+          countryMeta.featuredImageCategory !==
+            undefined &&
             (countryMeta.featuredImageCategory
               .imageFile.childImageSharp.fixed,
             {
@@ -35,7 +36,8 @@ const PostCardCat = ({ props }) => {
                   __html: name,
                 }}
               />
-              {countryMeta.featuredImageCategory && (
+              {countryMeta.featuredImageCategory !==
+                undefined && (
                 <Img
                   fixed={imageSourcesSixPosts}
                   alt={name}

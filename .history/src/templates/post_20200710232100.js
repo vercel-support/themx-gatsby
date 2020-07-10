@@ -13,6 +13,7 @@ import {
 import config from '../../config.js';
 import Typography from '../components/typography/typography';
 import Breadcrumbs from '../components/Breadcrumbs';
+// import { registerCoreBlocks } from '@wordpress/block-library';
 
 const Post = (props) => {
   const {
@@ -41,6 +42,7 @@ const Post = (props) => {
         media: `(min-width: 768px)`,
       }),
   ];
+  const blocks = {};
 
   return (
     <Layout>

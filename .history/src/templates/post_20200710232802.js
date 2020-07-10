@@ -13,6 +13,7 @@ import {
 import config from '../../config.js';
 import Typography from '../components/typography/typography';
 import Breadcrumbs from '../components/Breadcrumbs';
+import '@wordpress/block-library';
 
 const Post = (props) => {
   const {
@@ -44,6 +45,7 @@ const Post = (props) => {
 
   return (
     <Layout>
+      {/* registerCoreBlocks() */}
       {featuredImage.imageFile && (
         <Img
           fluid={imageSourcesHeader}

@@ -14,14 +14,18 @@ const PostCardCat = ({ props }) => {
           id,
         } = node;
         const imageSourcesSixPosts = [
-          countryMeta.featuredImageCategory &&
-            (countryMeta.featuredImageCategory
-              .imageFile.childImageSharp.fixed,
-            {
-              ...countryMeta.featuredImageCategory
-                .landscape.childImageSharp.fixed,
-              media: `(min-width: 768px)`,
-            }),
+          countryMeta.featuredImageCategory !==
+            undefined &&
+            countryMeta.featuredImageCategory !==
+              undefined &&
+              (countryMeta.featuredImageCategory
+                .imageFile.childImageSharp.fixed,
+              {
+                ...countryMeta
+                  .featuredImageCategory.landscape
+                  .childImageSharp.fixed,
+                media: `(min-width: 768px)`,
+              }),
         ];
         return (
           <article
@@ -35,7 +39,8 @@ const PostCardCat = ({ props }) => {
                   __html: name,
                 }}
               />
-              {countryMeta.featuredImageCategory && (
+              {countryMeta.featuredImageCategory !==
+                undefined && (
                 <Img
                   fixed={imageSourcesSixPosts}
                   alt={name}

@@ -13,6 +13,7 @@ import {
 import config from '../../config.js';
 import Typography from '../components/typography/typography';
 import Breadcrumbs from '../components/Breadcrumbs';
+import { registerCoreBlocks } from '@wordpress/block-library';
 
 const Post = (props) => {
   const {
@@ -30,6 +31,7 @@ const Post = (props) => {
     featuredImage,
     hotelCards,
     seo,
+    henk,
   } = post;
   const imageSourcesHeader = [
     featuredImage.imageFile &&
@@ -41,6 +43,7 @@ const Post = (props) => {
         media: `(min-width: 768px)`,
       }),
   ];
+  const [] = registerCoreBlocks;
 
   return (
     <Layout>

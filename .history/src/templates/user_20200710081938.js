@@ -71,9 +71,9 @@ const UserTemplate = (props) => {
                     />
                   </a>
                 )}
-                {customAuthorData.custompinterest && (
+                {customAuthorData.customPinterest && (
                   <a
-                    href={`https://pinterest.com/${customAuthorData.custompinterest}`}
+                    href={`https://pinterest.com/${customAuthorData.customPinterest}`}
                   >
                     <FontAwesomeIcon
                       icon={faPinterest}
@@ -116,7 +116,7 @@ export const pageQuery = graphql`
           customtwitter
           custominstagram
           customfacebook
-          custompinterest
+          customPinterest
           customavatar {
             sourceUrl
             altText

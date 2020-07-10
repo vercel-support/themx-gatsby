@@ -4,8 +4,8 @@ module.exports = {
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
     siteUrl:
-      'https://travelaar-gatsby.zandbox.xyz',
-    // `http://localhost:8000`,
+      // 'https://travelaar-gatsby.zandbox.xyz',
+      `http://localhost:8000`,
     // livegang
   },
   plugins: [
@@ -24,10 +24,10 @@ module.exports = {
     {
       resolve: `gatsby-wpgraphql-inline-images`,
       options: {
-        // wordPressUrl: `http://localhost/travelaar.dev/`,
-        // uploadsUrl: `http://localhost/travelaar.dev/wp-content/uploads/`,
-        wordPressUrl: `https://travelaar.nl/`,
-        uploadsUrl: `https://travelaar.nl/wp-content/uploads/`,
+        wordPressUrl: `http://localhost/travelaar.dev/`,
+        uploadsUrl: `http://localhost/travelaar.dev/wp-content/uploads/`,
+        // wordPressUrl: `https://travelaar.nl/`,
+        // uploadsUrl: `https://travelaar.nl/wp-content/uploads/`,
         processPostTypes: [
           `Post`,
           `Page`,
@@ -46,8 +46,8 @@ module.exports = {
       options: {
         typeName: `WPGraphql`,
         fieldName: `wpgraphql`,
-        // url: `http://localhost/travelaar.dev/graphql`,
-        url: `https://travelaar.nl/graphql`,
+        url: `http://localhost/travelaar.dev/graphql`,
+        // url: `https://travelaar.nl/graphql`,
         // livegang
       },
     },

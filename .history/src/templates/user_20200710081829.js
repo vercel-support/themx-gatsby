@@ -44,36 +44,36 @@ const UserTemplate = (props) => {
                 </Typography>
               </div>
               <div className='d-flex justify-content-around align-items-center'>
-                {customAuthorData.customfacebook && (
+                {customAuthorData.customFacebook && (
                   <a
-                    href={`https://facebook.com/${customAuthorData.customfacebook}`}
+                    href={`https://facebook.com/${customAuthorData.customFacebook}`}
                   >
                     <FontAwesomeIcon
                       icon={faFacebook}
                     />
                   </a>
                 )}
-                {customAuthorData.customtwitter && (
+                {customAuthorData.customTwitter && (
                   <a
-                    href={`https://twitter.com/${customAuthorData.customtwitter}`}
+                    href={`https://twitter.com/${customAuthorData.customTwitter}`}
                   >
                     <FontAwesomeIcon
                       icon={faTwitter}
                     />
                   </a>
                 )}
-                {customAuthorData.custominstagram && (
+                {customAuthorData.customInstagram && (
                   <a
-                    href={`https://instagram.com/${customAuthorData.custominstagram}`}
+                    href={`https://instagram.com/${customAuthorData.customInstagram}`}
                   >
                     <FontAwesomeIcon
                       icon={faInstagram}
                     />
                   </a>
                 )}
-                {customAuthorData.custompinterest && (
+                {customAuthorData.customPinterest && (
                   <a
-                    href={`https://pinterest.com/${customAuthorData.custompinterest}`}
+                    href={`https://pinterest.com/${customAuthorData.customPinterest}`}
                   >
                     <FontAwesomeIcon
                       icon={faPinterest}
@@ -113,10 +113,10 @@ export const pageQuery = graphql`
         name
         description
         customAuthorData {
-          customtwitter
-          custominstagram
-          customfacebook
-          custompinterest
+          customTwitter
+          customInstagram
+          customFacebook
+          customPinterest
           customavatar {
             sourceUrl
             altText

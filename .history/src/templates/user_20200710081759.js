@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql  } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import PostCard from '../components/PostCard/PostCard';
@@ -7,10 +7,10 @@ import Typography from '../components/typography/typography';
 import Img from 'gatsby-image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faTwitter,
-  faFacebook,
-  faInstagram,
-  faPinterest,
+	faTwitter,
+	faFacebook,
+	faInstagram,
+	faPinterest
 } from '@fortawesome/free-brands-svg-icons';
 
 const UserTemplate = (props) => {
@@ -31,57 +31,24 @@ const UserTemplate = (props) => {
       <section className='container pb-48'>
         <div className='row'>
           <div className='col-12 col-md-6'>
-            <div classaName='d-flex flex-column justify-content-between'>
-              <div>
-                <Typography
-                  variant='h1'
-                  className='pb-12'
-                >
-                  {name}
-                </Typography>
-                <Typography className='flex-50'>
-                  {description}
-                </Typography>
-              </div>
-              <div className='d-flex justify-content-around align-items-center'>
-                {customAuthorData.customfacebook && (
-                  <a
-                    href={`https://facebook.com/${customAuthorData.customfacebook}`}
-                  >
-                    <FontAwesomeIcon
-                      icon={faFacebook}
-                    />
-                  </a>
-                )}
-                {customAuthorData.customtwitter && (
-                  <a
-                    href={`https://twitter.com/${customAuthorData.customtwitter}`}
-                  >
-                    <FontAwesomeIcon
-                      icon={faTwitter}
-                    />
-                  </a>
-                )}
-                {customAuthorData.custominstagram && (
-                  <a
-                    href={`https://instagram.com/${customAuthorData.custominstagram}`}
-                  >
-                    <FontAwesomeIcon
-                      icon={faInstagram}
-                    />
-                  </a>
-                )}
-                {customAuthorData.custompinterest && (
-                  <a
-                    href={`https://pinterest.com/${customAuthorData.custompinterest}`}
-                  >
-                    <FontAwesomeIcon
-                      icon={faPinterest}
-                    />
-                  </a>
-                )}
-              </div>
-            </div>
+						<div classaName="d-flex flex-column justify-content-between">
+            	<div><Typography
+              variant='h1'
+              className='pb-12'
+            >
+              {name}
+            </Typography>
+            <Typography className='flex-50'>
+              {description}
+            </Typography>
+							</div>
+							<div className="d-flex justify-content-around align-items-center">
+								{customAuthorData.customFacebook && (<a href={`https://facebook.com/${customAuthorData.customFacebook}`}><FontAwesomeIcon icon={faFacebook}></a>)}
+									{customAuthorData.customTwitter && (<a href={`https://twitter.com/${customAuthorData.customTwitter}`}><FontAwesomeIcon icon={faTwitter}></a>)}
+										{customAuthorData.customInstagram && (<a href={`https://instagram.com/${customAuthorData.customInstagram}`}><FontAwesomeIcon icon={faInstagram}></a>)}
+											{customAuthorData.customPinterest && (<a href={`https://pinterest.com/${customAuthorData.customPinterest}`}><FontAwesomeIcon icon={faPinterest}></a>)}
+							</div>
+						</div>
           </div>
           <div className='col-12 col-md-6 text-right'>
             {customAuthorData.customavatar
@@ -113,10 +80,10 @@ export const pageQuery = graphql`
         name
         description
         customAuthorData {
-          customtwitter
-          custominstagram
-          customfacebook
-          custompinterest
+					customTwitter
+					customInstagram
+					customFacebook
+					customPinterest
           customavatar {
             sourceUrl
             altText

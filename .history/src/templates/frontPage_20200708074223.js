@@ -61,7 +61,7 @@ const FrontPage = (props) => {
 
       <PostCard props={posts.edges} />
 
-      <section className='container-fluid pb-60'>
+      <section className='container-fluid py-60'>
         <div className='about-us'>
           <div className='row align-items-center'>
             <div className='col-12 col-md-5'>
